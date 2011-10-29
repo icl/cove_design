@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css">
+<link href="css.css" rel="stylesheet" />
+<title>Dancers</title>
+</head>
+
+<body>
+
+
+<div class="topbar">
+	<div class="fill">
+		<div class="container">
+    			<a class="brand" href="#">Project name</a>
+				<ul class="nav">
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="dance.html">Video Page</a></li>
+				<li><a href="dance.html">Videos</a></li>
+				<li><a href="#contact">Lorum</a></li>
+          		</ul>
+        </div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="video">
+		<div class="span11 offset2">
+			<img height="360" width="640" src="images/video-tracked.jpg">
+		</div>
+	</div>
+    
+		<div class="span11 offset2">
+        	<div class="btn-back">
+            	<a href="#" class="back-link">&lsaquo;&lsaquo; 2</a>
+            </div>
+            <div class="btn-rec">
+            	<a href="#" class="rec-link">Mark</a>
+            </div>
+        </div>
+</div>
+
+    
+<div id="footer">
+	<div class="footer-body">
+        <p class="footer">&copy; Company 2011</p></span>
+	</div>
+</div>
+
+<!-- Noisy JQuery Begin -->
+<script src="jquery-1.3.2.min.js"></script>
+<script src="jquery.noisy.min.js"></script>
+<script type="text/javascript">
+$('html, body').noisy({
+    'intensity' : 1, 
+    'size' : 200, 
+    'opacity' : 0.08, 
+    'fallback' : '', 
+    'monochrome' : false
+}).css('background-color', '#EDEBDE');
+
+<!-- Sticky footer -->
+$(window).bind("load", function() { 
+
+       var footerHeight = 0,
+           footerTop = 0,
+           $footer = $("#footer");
+
+       positionFooter();
+
+	function positionFooter() {
+		footerHeight = $footer.height();
+		footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+"px";
+
+	if ( ($(document.body).height()+footerHeight) < $(window).height()) 
+	{
+    	$footer.css({position: "absolute"})
+		.animate({top: footerTop}, -1)
+               } 
+			   
+	else {
+        
+		$footer.css({position: "static"})
+         }
+
+       }
+
+       $(window)
+               .scroll(positionFooter)
+               .resize(positionFooter)
+
+});
+
+</script>
+
+
+
+</body>
+</html>
