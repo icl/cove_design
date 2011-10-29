@@ -258,20 +258,12 @@ a.link-block {
 	display:block;
 }
 
-#footer {
-	width:100%;
-	margin-left:auto;
-	margin-left:auto;
+footer {
 	color:#CCC;
 	height: 100px; 
 	background-color:#333;
+  text-align:center;
 	
 }
 
-.footer-body {
-	padding:20px 0 0 0; 
-	width:960px;
-	margin-left:auto;
-	margin-right:auto;
-}
 
